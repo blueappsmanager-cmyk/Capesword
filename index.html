@@ -3,202 +3,508 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy - Bunny Blast - Cute Block Puzzle</title>
-  <meta name="description" content="Official Privacy Policy for Bunny Blast - Cute Block Puzzle by BlueAppsBox." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Privacy Policy - WordsCapes - Word Connect Puzzle</title>
+  <meta name="description" content="Official Privacy Policy for WordsCapes - Word Connect Puzzle (com.blueapps.wordscapescon) by BlueAppsBox." />
+  <meta name="author" content="BlueAppsBox" />
+  <meta name="robots" content="index, follow" />
   <style>
     :root {
-      --primary: #d946ef;
-      --bg: #0f071a;
-      --card-bg: #1c0e30;
-      --card-border: #381a5c;
-      --text-main: #f8fafc;
-      --text-muted: #cbd5e1;
-      --accent: #fde047;
+      --bg: #090d16;
+      --card-bg: rgba(17, 24, 39, 0.85);
+      --card-inner: rgba(15, 23, 42, 0.6);
+      --border: rgba(51, 65, 85, 0.65);
+      --accent-gold: #f59e0b;
+      --accent-gold-light: #fde68a;
+      --accent-green: #10b981;
+      --accent-blue: #38bdf8;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
     body {
-      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-      background-color: var(--bg);
-      color: var(--text-main);
-      line-height: 1.65;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
       padding: 24px 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       min-height: 100vh;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(245, 158, 11, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 40%);
+      background-attachment: fixed;
     }
+
     .container {
-      width: 100%;
-      max-width: 820px;
-      background: var(--card-bg);
-      border: 1.5px solid var(--card-border);
-      border-radius: 24px;
-      padding: 36px 28px;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+      max-width: 860px;
+      margin: 0 auto;
     }
-    .header-badge {
+
+    header {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 32px 28px;
+      margin-bottom: 24px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #10b981, #f59e0b, #d97706);
+    }
+
+    .app-badge {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(217, 70, 239, 0.15);
-      border: 1px solid rgba(217, 70, 239, 0.4);
-      padding: 6px 14px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: var(--accent-gold-light);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 5px 12px;
       border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
-      color: #f472b6;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
-    h1 { font-size: 30px; font-weight: 800; color: #ffffff; margin-bottom: 8px; }
-    .sub-meta {
-      font-size: 14px; color: var(--text-muted); margin-bottom: 24px;
-      padding-bottom: 16px; border-bottom: 1px solid var(--card-border);
-      display: flex; flex-wrap: wrap; gap: 16px;
+
+    h1 {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #ffffff 40%, var(--accent-gold-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    .sub-meta strong { color: var(--accent); }
-    .app-card {
-      background: rgba(15, 7, 26, 0.6);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 16px 20px;
-      margin-bottom: 26px;
+
+    .meta-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 12px;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 13px;
+    }
+
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .meta-label {
+      color: var(--text-muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 2px;
+    }
+
+    .meta-val {
+      font-weight: 700;
+      color: #e2e8f0;
+      word-break: break-all;
+    }
+
+    .meta-val a {
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+
+    .meta-val a:hover {
+      text-decoration: underline;
+    }
+
+    .tools-bar {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .search-input {
+      flex: 1;
+      min-width: 240px;
+      padding: 12px 16px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      color: #ffffff;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent-gold);
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .btn:hover {
+      background: rgba(245, 158, 11, 0.15);
+      border-color: var(--accent-gold);
+    }
+
+    .section-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 18px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .section-card:hover {
+      border-color: rgba(245, 158, 11, 0.4);
+    }
+
+    .section-card h2 {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--accent-gold-light);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .section-card p {
+      color: #cbd5e1;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .section-card ul {
+      margin-left: 20px;
+      margin-bottom: 12px;
+      color: #cbd5e1;
       font-size: 14px;
     }
-    .app-card div span {
-      display: block; font-size: 11px; text-transform: uppercase;
-      color: var(--text-muted); font-weight: 700;
+
+    .section-card li {
+      margin-bottom: 6px;
     }
-    .app-card div strong { color: #ffffff; font-size: 14px; }
-    h2 { font-size: 20px; font-weight: 800; color: var(--accent); margin-top: 26px; margin-bottom: 10px; }
-    p { margin-bottom: 14px; color: var(--text-muted); font-size: 14.5px; }
-    ul { margin-left: 20px; margin-bottom: 16px; color: var(--text-muted); font-size: 14.5px; }
-    li { margin-bottom: 8px; }
-    li strong { color: #ffffff; }
+
     .highlight-box {
-      background: rgba(253, 224, 71, 0.08);
-      border-left: 4px solid var(--accent);
-      padding: 14px 18px;
+      background: var(--card-inner);
+      border-left: 4px solid var(--accent-green);
+      padding: 14px 16px;
       border-radius: 0 12px 12px 0;
-      margin: 18px 0;
-      font-size: 14px;
-      color: #fef08a;
+      margin: 14px 0;
+      font-size: 13.5px;
+      color: #e2e8f0;
     }
-    .contact-card {
-      background: linear-gradient(135deg, rgba(217, 70, 239, 0.15), rgba(162, 28, 175, 0.05));
-      border: 1.5px solid rgba(217, 70, 239, 0.4);
-      border-radius: 18px;
-      padding: 20px;
+
+    .highlight-box.warning {
+      border-left-color: var(--accent-gold);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 13px;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+    }
+
+    th {
+      background: rgba(245, 158, 11, 0.12);
+      color: var(--accent-gold-light);
+      font-weight: 800;
+    }
+
+    td {
+      background: rgba(15, 23, 42, 0.5);
+      color: #cbd5e1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 16px;
+      color: var(--text-muted);
+      font-size: 12.5px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
       margin-top: 32px;
     }
-    .contact-card a { color: var(--accent); text-decoration: none; font-weight: 700; }
-    footer { margin-top: 24px; text-align: center; font-size: 13px; color: #64748b; }
+
+    footer a {
+      color: var(--accent-gold);
+      text-decoration: none;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        color: #000000;
+      }
+      header, .section-card, .highlight-box {
+        background: #ffffff;
+        border: 1px solid #cccccc;
+        color: #000000;
+        box-shadow: none;
+      }
+      h1, .section-card h2 {
+        color: #000000;
+      }
+      .tools-bar {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
-
   <div class="container">
-    <div class="header-badge">🔒 Privacy Policy</div>
-    <h1>Bunny Blast - Cute Block Puzzle</h1>
-    
-    <div class="sub-meta">
-      <div>Publisher: <strong>BlueAppsBox</strong></div>
-      <div>Effective Date: <strong>October 2026</strong></div>
-      <div>Status: <strong>Active &amp; Compliant</strong></div>
+    <header>
+      <div class="app-badge">Official Play Console Privacy Policy</div>
+      <h1>WordsCapes - Word Connect Puzzle</h1>
+      <p style="color: var(--text-muted); font-size: 14px;">
+        Comprehensive privacy disclosures and user rights for WordsCapes - Word Connect Puzzle by BlueAppsBox.
+      </p>
+
+      <div class="meta-grid">
+        <div class="meta-item">
+          <span class="meta-label">Application Name</span>
+          <span class="meta-val">WordsCapes - Word Connect Puzzle</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Package Name (Application ID)</span>
+          <span class="meta-val">com.blueapps.wordscapescon</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Developer / Company Tag</span>
+          <span class="meta-val">BlueAppsBox</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Developer Contact Email</span>
+          <span class="meta-val"><a href="mailto:blueappsmanager@gmail.com">blueappsmanager@gmail.com</a></span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Game Architecture</span>
+          <span class="meta-val">Online Mobile Word Connect Puzzle</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Effective Date</span>
+          <span class="meta-val" id="effective-date">October 26, 2026</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="tools-bar">
+      <input type="text" id="policy-search" class="search-input" placeholder="🔍 Search sections (e.g. ads, data, children, contact)..." />
+      <button class="btn" onclick="window.print()">🖨️ Print / Save PDF</button>
     </div>
 
-    <div class="app-card">
-      <div>
-        <span>Application Title</span>
-        <strong>Bunny Blast - Cute Block Puzzle</strong>
+    <section class="section-card" data-title="introduction scope overview">
+      <h2>1. Introduction & Overview</h2>
+      <p>
+        Welcome to <strong>WordsCapes - Word Connect Puzzle</strong> (package name <strong><code>com.blueapps.wordscapescon</code></strong>), created and maintained by <strong>BlueAppsBox</strong> ("we", "our", or "us").
+      </p>
+      <p>
+        This Privacy Policy explains how information is processed and safeguarded when you install and play WordsCapes - Word Connect Puzzle on mobile Android devices. We adhere to the Google Play Developer Distribution Agreement, Google Play Families Policy, and international privacy standards (GDPR, COPPA, and CCPA).
+      </p>
+      <div class="highlight-box">
+        <strong>Core Commitment:</strong> WordsCapes does not require user accounts, email registration, passwords, or personal identity verification. We never sell, rent, or trade your personal data.
       </div>
-      <div>
-        <span>Package Identifier</span>
-        <strong>com.blueapps.cuteblockpuzzle</strong>
+    </section>
+
+    <section class="section-card" data-title="online nature connectivity internet">
+      <h2>2. Online Nature & Connectivity</h2>
+      <p>
+        WordsCapes - Word Connect Puzzle is an <strong>online casual puzzle game</strong>. While crossword grid mechanics are solved instantaneously on your device, the game requires active internet connectivity (via Wi-Fi or cellular mobile data) to:
+      </p>
+      <ul>
+        <li>Communicate with Google Mobile Ads (AdMob) SDK to request and display non-intrusive banner ads, app open ads, and rewarded video ads.</li>
+        <li>Credit rewarded video ad tokens (free letters, shuffles, and coins) to the player upon verified ad completion.</li>
+        <li>Perform anonymous stability checks and ensure up-to-date gameplay validation.</li>
+      </ul>
+    </section>
+
+    <section class="section-card" data-title="data not collected zero pii">
+      <h2>3. Data We Do NOT Collect (Zero Sensitive PII)</h2>
+      <p>
+        We practice strict data minimization. The game does <strong>NOT</strong> request or collect any of the following sensitive personal information:
+      </p>
+      <ul>
+        <li><strong>No Real Identity Data:</strong> No first name, last name, home address, physical location, or national identification numbers.</li>
+        <li><strong>No Account Credentials:</strong> No usernames, email addresses, or passwords required to play.</li>
+        <li><strong>No Device Sensors:</strong> No access to camera, microphone, audio recordings, or biometric sensors.</li>
+        <li><strong>No Social Media or Contacts:</strong> No access to phone contacts, address books, call logs, or social media profiles.</li>
+        <li><strong>No Financial / Payment Data:</strong> The game does not process credit cards, bank accounts, or real-money in-app transactions.</li>
+      </ul>
+    </section>
+
+    <section class="section-card" data-title="local storage client state">
+      <h2>4. On-Device Local Data Storage</h2>
+      <p>
+        To preserve your gameplay achievements across all 300 levels, WordsCapes uses client-side HTML5 <code>localStorage</code> and Android app-specific internal sandbox storage. The following data is saved purely on your physical device:
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Stored Property</th>
+            <th>Purpose</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Level Progress (1 to 300)</td>
+            <td>Resumes your active chapter and unlocked levels.</td>
+            <td>On-device <code>localStorage</code></td>
+          </tr>
+          <tr>
+            <td>Virtual Coins & Star Ratings</td>
+            <td>Tracks virtual hints, unlocked bonus chest rewards, and stage mastery.</td>
+            <td>On-device <code>localStorage</code></td>
+          </tr>
+          <tr>
+            <td>Daily Free Hint Timestamps</td>
+            <td>Enables 1 free hint and 1 free shuffle every calendar day.</td>
+            <td>On-device <code>localStorage</code></td>
+          </tr>
+          <tr>
+            <td>Sound & Audio Preferences</td>
+            <td>Remembers sound on/off toggle settings.</td>
+            <td>On-device <code>localStorage</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="highlight-box warning">
+        <strong>Virtual Coins Notice:</strong> Virtual coins have zero monetary value, cannot be exchanged for fiat currency or cash rewards, and are purely visual aids for crossword letter hints.
       </div>
-      <div>
-        <span>Developer / Publisher</span>
-        <strong>BlueAppsBox</strong>
+    </section>
+
+    <section class="section-card" data-title="advertising google admob monetization ads">
+      <h2>5. Third-Party Advertising (Google AdMob)</h2>
+      <p>
+        WordsCapes - Word Connect Puzzle integrates the official Google Mobile Ads SDK (AdMob) to display advertisements that support ongoing development. These ad formats include:
+      </p>
+      <ul>
+        <li><strong>Banner Ads:</strong> Displayed neatly at the bottom of the game container.</li>
+        <li><strong>Cold-Start App Open Ads:</strong> Displayed briefly when the game launches.</li>
+        <li><strong>Rewarded Video Ads (User-Initiated):</strong> Players may choose to view short 5-second video ads in exchange for free in-game letter hints, shuffles, or extra attempts after 3 wrong turns.</li>
+      </ul>
+      <p>
+        Google AdMob may process non-sensitive technical identifiers including:
+      </p>
+      <ul>
+        <li>Google Advertising ID (AAID), subject to your Android device OS privacy toggle.</li>
+        <li>IP address (for coarse geographic location / country-level ad serving).</li>
+        <li>Device model, OS version, and network carrier metrics.</li>
+      </ul>
+      <p>
+        To review Google's advertising policies or opt out of personalized advertising on Android, visit:
+        <br />
+        <a href="https://policies.google.com/technologies/ads" target="_blank" style="color: var(--accent-blue); text-decoration: underline;">
+          https://policies.google.com/technologies/ads
+        </a>
+      </p>
+    </section>
+
+    <section class="section-card" data-title="children coppa families privacy">
+      <h2>6. Children's Privacy (COPPA Compliance)</h2>
+      <p>
+        WordsCapes - Word Connect Puzzle is designed as a family-friendly educational word puzzle suitable for all audiences. We comply fully with the <strong>Children's Online Privacy Protection Act (COPPA)</strong> and Google Play Families Policies.
+      </p>
+      <ul>
+        <li>We do not knowingly solicit or collect personal information from children under the age of 13.</li>
+        <li>All ad requests are flagged for child-directed treatment where applicable, ensuring age-appropriate ad content.</li>
+        <li>If a parent or guardian discovers that a child has provided unauthorized data, please contact us immediately at <strong>blueappsmanager@gmail.com</strong>.</li>
+      </ul>
+    </section>
+
+    <section class="section-card" data-title="data retention control deletion clear cache">
+      <h2>7. User Control & Data Deletion</h2>
+      <p>
+        Because all game progress is stored locally on your device, you have complete and instantaneous control over your data:
+      </p>
+      <ul>
+        <li><strong>Clear All Data:</strong> Open your Android device <em>Settings &gt; Apps &gt; WordsCapes &gt; Storage &gt; Clear Storage / Clear Cache</em>. This immediately deletes all saved levels and coins.</li>
+        <li><strong>Uninstall:</strong> Uninstalling WordsCapes from your device automatically removes all local files associated with the game.</li>
+        <li><strong>Ad ID Reset:</strong> You can reset or delete your Google Advertising ID at any time via <em>Android Settings &gt; Privacy &gt; Ads &gt; Delete Advertising ID</em>.</li>
+      </ul>
+    </section>
+
+    <section class="section-card" data-title="security policy updates">
+      <h2>8. Data Security & Policy Updates</h2>
+      <p>
+        We implement industry-standard security safeguards. Communications with Google AdMob use encrypted HTTPS/TLS protocols. We periodically review this Privacy Policy to align with evolving legal standards and Google Play Console requirements. Any modifications will be posted directly on this URL with an updated Effective Date.
+      </p>
+    </section>
+
+    <section class="section-card" data-title="contact email blueappsbox support">
+      <h2>9. Contact Information & Developer Support</h2>
+      <p>
+        If you have any questions, suggestions, legal inquiries, or data privacy requests regarding WordsCapes - Word Connect Puzzle, please contact BlueAppsBox directly:
+      </p>
+      <div class="highlight-box">
+        <strong>Company:</strong> BlueAppsBox<br />
+        <strong>Application:</strong> WordsCapes - Word Connect Puzzle (<code>com.blueapps.wordscapescon</code>)<br />
+        <strong>Direct Contact Email:</strong> <a href="mailto:blueappsmanager@gmail.com" style="color: var(--accent-gold); font-weight: bold;">blueappsmanager@gmail.com</a>
       </div>
-      <div>
-        <span>Official Support Email</span>
-        <strong>blueappsmanager@gmail.com</strong>
-      </div>
-    </div>
+    </section>
 
-    <h2>1. Overview &amp; Commitment</h2>
-    <p>
-      This Privacy Policy applies to the mobile game <strong>Bunny Blast - Cute Block Puzzle</strong>, published by <strong>BlueAppsBox</strong> ("we", "us", or "our"). We are dedicated to ensuring a secure and family-friendly experience for all players.
-    </p>
-
-    <h2>2. Information Collection and Use</h2>
-    <p>
-      <strong>Bunny Blast - Cute Block Puzzle does NOT collect, store, or sell any Personally Identifiable Information (PII).</strong>
-    </p>
-    <ul>
-      <li><strong>No Account Registration:</strong> All 300 levels can be enjoyed without signing in, registering emails, or sharing credentials.</li>
-      <li><strong>No Device Media or Contact Access:</strong> The app never requests access to your photos, contacts, camera, or microphone.</li>
-      <li><strong>No Precise Location Tracking:</strong> We do not track or store your GPS location.</li>
-    </ul>
-
-    <h2>3. Local Storage Data (On-Device Only)</h2>
-    <p>
-      The App uses HTML5 LocalStorage strictly on your local device to save:
-    </p>
-    <ul>
-      <li><strong>High Scores &amp; Unlocked Levels:</strong> To remember your achievements across Levels 1 to 300.</li>
-      <li><strong>Audio Preferences:</strong> To store your Sound On / Mute settings.</li>
-    </ul>
-    <p>
-      This data stays strictly on your personal phone and is never uploaded to external servers.
-    </p>
-
-    <h2>4. Advertising &amp; Google AdMob SDK</h2>
-    <p>
-      The Game is supported by non-intrusive advertisements served through the <strong>Google Mobile Ads (AdMob) SDK</strong>. Optional rewarded video ads allow players to revive when no moves remain.
-    </p>
-    <p>
-      Google AdMob may collect technical pseudonymous identifiers in compliance with Google Play Developer Policies, such as:
-    </p>
-    <ul>
-      <li>Google Advertising ID (GAID) — resettable anytime in your Android device settings.</li>
-      <li>Basic device model, OS version, and network country.</li>
-      <li>Ad interaction and rewarded ad completion events.</li>
-    </ul>
-
-    <h2>5. Children’s Online Privacy Protection (COPPA &amp; GDPR-K)</h2>
-    <div class="highlight-box">
-      <strong>Family &amp; Child Safety:</strong> Bunny Blast - Cute Block Puzzle is safe for children and families. We adhere strictly to COPPA, GDPR-K, and Google Play Families Policy guidelines. All ad requests follow child-directed settings where required.
-    </div>
-
-    <h2>6. Data Deletion &amp; Control</h2>
-    <p>
-      You have full control over your local game data:
-    </p>
-    <ul>
-      <li><strong>Clear Storage:</strong> Go to <em>Android Settings &gt; Apps &gt; Bunny Blast - Cute Block Puzzle &gt; Storage &gt; Clear Data</em> to wipe all local stats.</li>
-      <li><strong>Uninstall:</strong> Uninstalling the application automatically deletes all stored game state.</li>
-    </ul>
-
-    <div class="contact-card">
-      <h3 style="font-size:18px; margin-bottom:8px; color:#ffffff;">Contact &amp; Support</h3>
-      <p style="margin-bottom:6px;">🏢 <strong>Company:</strong> BlueAppsBox</p>
-      <p style="margin-bottom:6px;">✉️ <strong>Email:</strong> <a href="mailto:blueappsmanager@gmail.com">blueappsmanager@gmail.com</a></p>
-      <p style="margin-bottom:0;">📱 <strong>Package ID:</strong> <code>com.blueapps.cuteblockpuzzle</code></p>
-    </div>
+    <footer>
+      <p>&copy; 2026 <strong>BlueAppsBox</strong>. All rights reserved.</p>
+      <p style="margin-top: 6px;">
+        WordsCapes - Word Connect Puzzle &middot; Package: <code>com.blueapps.wordscapescon</code> &middot; Developer: <a href="mailto:blueappsmanager@gmail.com">blueappsmanager@gmail.com</a>
+      </p>
+    </footer>
   </div>
 
-  <footer>
-    &copy; 2026 BlueAppsBox. All rights reserved. &bull; Bunny Blast - Cute Block Puzzle
-  </footer>
-
   <script>
-    console.log("Privacy Policy ready for com.blueapps.cuteblockpuzzle by BlueAppsBox");
+    document.getElementById('policy-search').addEventListener('input', function(e) {
+      const q = e.target.value.toLowerCase().trim();
+      const sections = document.querySelectorAll('.section-card');
+      sections.forEach(sec => {
+        const title = (sec.getAttribute('data-title') || '').toLowerCase();
+        const text = sec.innerText.toLowerCase();
+        if (!q || title.includes(q) || text.includes(q)) {
+          sec.style.display = 'block';
+        } else {
+          sec.style.display = 'none';
+        }
+      });
+    });
   </script>
 </body>
 </html>
